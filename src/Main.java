@@ -4,8 +4,9 @@ public class Main {
 
     public static void main(String[] args) {
         System.out.print(PrintWelcomeMessage());
+
         BooksList booksList= new BooksList();
-        PrintListOfBooksInScreen(booksList.ReturnAListofBooksInTheSystem());
+        PrintListOfBooksInScreen(booksList.ReturnAListOfBooksInSystem());
     }
 
     public static String PrintWelcomeMessage(){
@@ -13,8 +14,8 @@ public class Main {
         return Massage;
     }
 
-    public static void PrintListOfBooksInScreen(List<String> ListOfBooks){
-        ListOfBooks.forEach((book) -> System.out.println(book));
+    public static void PrintListOfBooksInScreen(List<Book> ListBook){
+        ListBook.forEach((book) -> System.out.println(book.NameOfBook + " " + book.Author + " "+ book.YearOfPublished));
     }
 
 

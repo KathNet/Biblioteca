@@ -3,15 +3,17 @@ import java.util.List;
 
 public class BooksList {
 
-    List<String> ListOfBooksInTheSystem = new ArrayList<String>();
+    List<Book> BookList = new ArrayList<Book>();
 
     public void BookList(){}
 
-    public List ReturnAListofBooksInTheSystem(){
-        return  ListOfBooksInTheSystem;
+    public List<Book> ReturnAListOfBooksInSystem(){
+        return BookList;
     }
 
-    public void AddBookToTheSystem(String book){
-        ListOfBooksInTheSystem.add(book);
+    public void AddBookToTheSystem(Book book){
+        BookList.add(book);
     }
+
+
 }
