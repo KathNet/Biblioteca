@@ -3,17 +3,38 @@ import java.util.List;
 
 public class BooksList {
 
-    List<Book> BookList = new ArrayList<Book>();
+    private List<Book> BookList = new ArrayList<>();
 
-    public void BookList(){}
-
-    public List<Book> ReturnAListOfBooksInSystem(){
+    public List<Book> getBookList() {
         return BookList;
     }
 
-    public void AddBookToTheSystem(Book book){
-        BookList.add(book);
+    public void setBookList(List<Book> bookList) {
+        BookList = bookList;
     }
 
+    public void BookList() {
+    }
 
+    public List<Book> ReturnAListOfBooksInSystem() {
+        return getBookList();
+    }
+
+    public void AddBookToTheSystem(Book book) {
+        getBookList().add(book);
+    }
+
+    public boolean CheckOutBook(String Name) {
+        String book= new String();
+        for (int i=0;i<getBookList().size(); i++){
+            if(getBookList().get(i).NameOfBook==Name){
+                getBookList().get(i).State=false;
+                getBookList().remove(i);
+                return true;
+            }
+        }
+        return false;
+    }
 }
+
+

@@ -29,5 +29,59 @@ class BooksListTest {
         //Assert
         assertEquals(BookOfList.size(), 2);
     }
+
+    @Test
+    void ChangeStateOfBookInTheLibrary(){
+        //Arrange
+        BooksList bookList = new BooksList();
+        Book book1= new Book("libro1", "1909", "Juan");
+        Book book2= new Book("libro2", "1909", "Juan");
+        bookList.AddBookToTheSystem(book1);
+        bookList.AddBookToTheSystem(book2);
+        boolean verification = false;
+
+        //Act
+        verification= bookList.CheckOutBook("libro1");
+
+        //Assert
+        assertEquals(true,verification);
+    }
+
+    @Test
+    void ChangeSizeBookList(){
+
+        //Arrange
+        BooksList bookList = new BooksList();
+        Book book1= new Book("libro1", "1909", "Juan");
+        Book book2= new Book("libro2", "1909", "Juan");
+        bookList.AddBookToTheSystem(book1);
+        bookList.AddBookToTheSystem(book2);
+
+
+        //Act
+        bookList.CheckOutBook("libro1");
+
+        //Assert
+        assertEquals(1, bookList.getBookList().size());
+    }
+
+    @Test
+    void CheckRemoveBook(){
+
+        //Arrange
+        BooksList bookList = new BooksList();
+        Book book1= new Book("libro1", "1909", "Juan");
+        Book book2= new Book("libro2", "1909", "Juan");
+        bookList.AddBookToTheSystem(book1);
+        bookList.AddBookToTheSystem(book2);
+
+
+        //Act
+        bookList.CheckOutBook("libro1");
+
+        //Assert
+        assertEquals("libro2", bookList.getBookList().get(0).NameOfBook);
+    }
+
 }
 
