@@ -25,7 +25,6 @@ public class BooksList {
     }
 
     public boolean CheckOutBook(String Name) {
-        String book= new String();
         for (int i=0;i<getBookList().size(); i++){
             if(getBookList().get(i).NameOfBook==Name){
                 getBookList().get(i).State=false;
@@ -35,6 +34,7 @@ public class BooksList {
         }
         return false;
     }
+
 }
 
 

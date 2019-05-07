@@ -28,4 +28,12 @@ public class Menu {
         }
         return CollectionOfBooks;
     }
+
+    public boolean PrintMessageAboutCheckout(boolean verification){
+            if(verification){
+                System.out.println("Thank you! Enjoy the book");
+                return true;
+            }
+            return false;
+    }
 }
