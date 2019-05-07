@@ -24,4 +24,28 @@ class MenuTest {
         assertTrue(MenuReal.equals(MenuTest));
     }
 
+    @Test
+    void CheckValidOptionOneMessage(){
+        //Arrange
+        Menu menu = new Menu();
+        String Result = new String();
+        //Act
+        Result= menu.RecibeOptionChooseForUserAndCallTheActionSelect("1");
+
+        //Assert
+        assertEquals("", Result);
+    }
+
+    @Test
+    void CheckInvalidOptionMessage(){
+        //Arrange
+        Menu menu = new Menu();
+        String Result = new String();
+
+        //Act
+        Result= menu.RecibeOptionChooseForUserAndCallTheActionSelect("2");
+
+        //Assert
+        assertEquals("Please select a valid option!", Result);
+    }
 }
