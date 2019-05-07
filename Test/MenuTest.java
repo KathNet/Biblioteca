@@ -1,7 +1,8 @@
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
-import static org.junit.jupiter.api.Assertions.*;
+import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.junit.jupiter.api.Assertions.assertTrue;
 
 class MenuTest {
 
@@ -47,5 +48,19 @@ class MenuTest {
 
         //Assert
         assertEquals("Please select a valid option!", Result);
+    }
+
+
+    @Test
+    public void systemExitWithArbitraryStatusCode() {
+        //Arrange
+        Menu menu = new Menu();
+        String Result = new String();
+
+        //Act
+        Result= menu.RecibeOptionChooseForUserAndCallTheActionSelect("0");
+
+        //Assert
+        assertEquals("Quit Application", Result);
     }
 }

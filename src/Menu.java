@@ -8,8 +8,12 @@ public class Menu {
         return Menu;
     }
 
+
     public String RecibeOptionChooseForUserAndCallTheActionSelect(String option) {
         String Message= "Please select a valid option!";
+        if(option.equals("0")) {
+            Message="Quit Application";
+        }
         if (option.equals("1")) {
             BooksList booksList = new BooksList();
             Message = ReturnListOfBooksInScreen(booksList.ReturnAListOfBooksInSystem());

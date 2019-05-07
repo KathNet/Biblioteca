@@ -7,7 +7,11 @@ public class Main {
         Menu menu= new Menu();
         menu.CreateMenu();
         Scanner key = new Scanner(System.in);
-        menu.RecibeOptionChooseForUserAndCallTheActionSelect(key.toString());
+        String Result = menu.RecibeOptionChooseForUserAndCallTheActionSelect(key.toString());
+        if(Result=="Quit Application"){
+            System.exit(0);
+        }
+
     }
 
     public static String PrintWelcomeMessage(){
