@@ -63,4 +63,28 @@ class MenuTest {
         //Assert
         assertEquals("Quit Application", Result);
     }
+
+    @Test
+    void CheckSuccessMessageOnCheckoutOfABook(){
+        //Arrange
+        Menu menu= new Menu();
+        boolean verification= false;
+        // Act
+        verification=menu.PrintMessageAboutCheckout(true);
+
+        // Assert
+        assertEquals(true, verification);
+    }
+
+    @Test
+    void CheckUnsuccessfulMessage(){
+        //Arrange
+        Menu menu= new Menu();
+        boolean verification= true;
+        // Act
+        verification=menu.PrintMessageAboutCheckout(false);
+
+        // Assert
+        assertEquals(false, verification);
+    }
 }

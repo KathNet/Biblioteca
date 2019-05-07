@@ -83,16 +83,6 @@ class BooksListTest {
         assertEquals("libro2", bookList.getBookList().get(0).NameOfBook);
     }
 
-    @Test
-    void CheckSuccessMessageOnCheckoutOfABook(){
-        //Arrange
-        Menu menu= new Menu();
-        boolean verification= false;
-        // Act
-        verification=menu.PrintMessageAboutCheckout(true);
 
-        // Assert
-        assertEquals(true, verification);
-    }
 }
 

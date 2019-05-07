@@ -34,6 +34,9 @@ public class Menu {
                 System.out.println("Thank you! Enjoy the book");
                 return true;
             }
-            return false;
+            else {
+                System.out.println("Unsuccessful message on checkout of a book");
+                return false;
+            }
     }
 }

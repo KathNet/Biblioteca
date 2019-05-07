@@ -2,10 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="60ee956e-f868-4397-9777-f0472919c589" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Test/BooksListTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/Test/BooksListTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/BooksList.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/BooksList.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Menu.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Menu.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Test/MenuTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/Test/MenuTest.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -43,11 +41,11 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Test/BooksListTest.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="505">
-              <caret line="85" column="4" lean-forward="true" selection-start-line="85" selection-start-column="4" selection-end-line="85" selection-end-column="4" />
+            <state relative-caret-position="655">
+              <caret line="85" column="4" selection-start-line="85" selection-start-column="4" selection-end-line="85" selection-end-column="4" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -55,11 +53,11 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/Test/MenuTest.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="685">
-              <caret line="64" column="3" selection-start-line="64" selection-start-column="3" selection-end-line="64" selection-end-column="3" />
+            <state relative-caret-position="565">
+              <caret line="80" column="8" selection-start-line="80" selection-start-column="8" selection-end-line="80" selection-end-column="8" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -148,7 +146,6 @@
         <option value="$PROJECT_DIR$/.gitignore" />
         <option value="$PROJECT_DIR$/Test/BooksTest.java" />
         <option value="$PROJECT_DIR$/Test/MainTest.java" />
-        <option value="$PROJECT_DIR$/Test/MenuTest.java" />
         <option value="$PROJECT_DIR$/src/Main.java" />
         <option value="$PROJECT_DIR$/Test/BookTest.java" />
         <option value="$PROJECT_DIR$/src/Librarian.java" />
@@ -156,6 +153,7 @@
         <option value="$PROJECT_DIR$/src/BooksList.java" />
         <option value="$PROJECT_DIR$/src/Menu.java" />
         <option value="$PROJECT_DIR$/Test/BooksListTest.java" />
+        <option value="$PROJECT_DIR$/Test/MenuTest.java" />
       </list>
     </option>
   </component>
@@ -232,7 +230,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Application.Main">
+  <component name="RunManager" selected="JUnit.All in Biblioteca">
     <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="Main" />
       <module name="Biblioteca" />
@@ -244,16 +242,6 @@
       <module name="Biblioteca" />
       <option name="PACKAGE_NAME" value="" />
       <option name="TEST_OBJECT" value="package" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="BooksListTest.CambiarCantidad" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="Biblioteca" />
-      <option name="PACKAGE_NAME" value="" />
-      <option name="MAIN_CLASS_NAME" value="BooksListTest" />
-      <option name="METHOD_NAME" value="CambiarCantidad" />
-      <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -278,20 +266,30 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="MenuTest.CheckUnsuccessfulMessage" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="Biblioteca" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="MAIN_CLASS_NAME" value="MenuTest" />
+      <option name="METHOD_NAME" value="CheckUnsuccessfulMessage" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <list>
       <item itemvalue="JUnit.All in Biblioteca" />
-      <item itemvalue="JUnit.BooksListTest.CambiarCantidad" />
       <item itemvalue="JUnit.BooksListTest.CambiarCantidad3" />
       <item itemvalue="JUnit.BooksListTest.CheckSuccessMessageOnCheckoutOfABook" />
       <item itemvalue="Application.Main" />
+      <item itemvalue="JUnit.MenuTest.CheckUnsuccessfulMessage" />
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="Application.Main" />
         <item itemvalue="JUnit.All in Biblioteca" />
+        <item itemvalue="JUnit.MenuTest.CheckUnsuccessfulMessage" />
+        <item itemvalue="Application.Main" />
         <item itemvalue="JUnit.BooksListTest.CheckSuccessMessageOnCheckoutOfABook" />
         <item itemvalue="JUnit.BooksListTest.CambiarCantidad3" />
-        <item itemvalue="JUnit.BooksListTest.CambiarCantidad" />
       </list>
     </recent_temporary>
   </component>
@@ -435,16 +433,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Test/MenuTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="685">
-          <caret line="64" column="3" selection-start-line="64" selection-start-column="3" selection-end-line="64" selection-end-column="3" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/BooksList.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="525">
@@ -477,8 +465,18 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/Test/BooksListTest.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="505">
-          <caret line="85" column="4" lean-forward="true" selection-start-line="85" selection-start-column="4" selection-end-line="85" selection-end-column="4" />
+        <state relative-caret-position="655">
+          <caret line="85" column="4" selection-start-line="85" selection-start-column="4" selection-end-line="85" selection-end-column="4" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Test/MenuTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="565">
+          <caret line="80" column="8" selection-start-line="80" selection-start-column="8" selection-end-line="80" selection-end-column="8" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
