@@ -83,6 +83,18 @@ class BooksListTest {
         assertEquals("libro2", bookList.getBookList().get(0).NameOfBook);
     }
 
+    @Test
+    void CheckReturnABook() {
+        //Arrange
+        BooksList bookList = new BooksList();
+        Book book1= new Book("libro1", "1909", "Juan");
+
+        //Act
+        bookList.ReturnAbook(book1);
+
+        //Assert
+        assertEquals(0, bookList.getBookList().size());
+    }
 
 }
 
