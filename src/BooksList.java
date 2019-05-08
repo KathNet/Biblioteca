@@ -27,7 +27,7 @@ public class BooksList {
     public boolean CheckOutBook(String Name) {
         for (int i=0;i<getBookList().size(); i++){
             if(getBookList().get(i).getNameOfBook()==Name){
-                getBookList().get(i).isAvailable =false;
+                getBookList().get(i).setAvailable(false);
                 getBookList().remove(i);
                 return true;
             }

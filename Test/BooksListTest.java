@@ -1,4 +1,3 @@
-import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
 import java.util.ArrayList;
@@ -7,10 +6,6 @@ import java.util.List;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
 class BooksListTest {
-
-    @BeforeEach
-    void setUp(){
-    }
 
     @Test
     void ShowAListOfBooksAfterWelcomeMessage()
@@ -80,7 +75,7 @@ class BooksListTest {
         bookList.CheckOutBook("libro1");
 
         //Assert
-        assertEquals("libro2", bookList.getBookList().get(0).NameOfBook);
+        assertEquals("libro2", bookList.getBookList().get(0).getNameOfBook());
     }
 
     @Test

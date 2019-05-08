@@ -29,7 +29,7 @@ public class Book {
         this.author = author;
     }
 
-    public boolean isAvailable() {
+    public boolean getIsAvailable() {
         return isAvailable;
     }
 
@@ -47,4 +47,6 @@ public class Book {
         StockValue = StockValue;
         return StockValue;
     }
+
+
 }

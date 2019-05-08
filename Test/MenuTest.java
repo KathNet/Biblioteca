@@ -110,7 +110,7 @@ class MenuTest {
     void CheckNotifiedOnSuccessfulReturn(){
         //Arrange
         Book book = new Book("libro1", "1999", "juan");
-        book.State=false;
+        book.setAvailable(false);
         Menu menu = new Menu();
         boolean verification= false;
         //Act
@@ -124,7 +124,7 @@ class MenuTest {
     void CheckUnsuccessfulReturn(){
         //Arrange
         Book book = new Book("libro1", "1999", "juan");
-        book.State= true;
+        book.setAvailable(true);
         Menu menu = new Menu();
         boolean verification= false;
         //Act

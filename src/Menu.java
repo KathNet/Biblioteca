@@ -40,7 +40,7 @@ public class Menu {
     public String ReturnListOfBooksInScreen(List<Book> ListBook) {
         String CollectionOfBooks = new String();
         for (int i=0; i<CollectionOfBooks.length(); i++) {
-            CollectionOfBooks+=ListBook.get(i).NameOfBook+" "+ListBook.get(i).Author+" "+ListBook.get(i).YearOfPublished+" \n";
+            CollectionOfBooks+=ListBook.get(i).getNameOfBook()+" "+ListBook.get(i).getAuthor()+" "+ListBook.get(i).getYearOfPublished()+" \n";
         }
         return CollectionOfBooks;
     }
@@ -57,7 +57,7 @@ public class Menu {
     }
 
     public boolean PrintMessageNotifiedOnSuccessfulReturn(Book book){
-            if(book.State==false) {
+            if(book.getIsAvailable()==false) {
                 BooksList booksList = new BooksList();
                 booksList.AddBookToTheSystem(book);
                 System.out.println("Thank you for returning the book”");
