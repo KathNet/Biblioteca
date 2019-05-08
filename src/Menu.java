@@ -4,8 +4,18 @@ public class Menu {
 
     public String CreateMenu() {
         String Menu = new String();
-        Menu = "Chose Option: \n 1)List of Books \n Option: ";
+        Menu = "\nChose Option:\n" +
+                "1)List of Books\n" +
+                "2)CheckOut Book\n" +
+                "3)Return Book \n" +
+                "0)Exit\n"+
+                "Option: ";
         return Menu;
+    }
+
+    public String PrintWelcomeMessage(){
+        String Massage= "Welcome to Biblioteca. Your one-stop-shop for great book titles in Bangalore!";
+        return Massage;
     }
 
 
@@ -17,6 +27,12 @@ public class Menu {
         if (option.equals("1")) {
             BooksList booksList = new BooksList();
             Message = ReturnListOfBooksInScreen(booksList.ReturnAListOfBooksInSystem());
+        }
+        if(option.equals("2")){
+            Message="Write the name of book: \n";
+        }
+        if(option.equals("3")){
+            Message= "Return Book: \n";
         }
         return Message;
     }
@@ -39,4 +55,13 @@ public class Menu {
                 return false;
             }
     }
+
+    public boolean PrintMessageNotifiedOnSuccessfulReturn(Book book){
+            BooksList booksList = new BooksList();
+            booksList.AddBookToTheSystem(book);
+            System.out.println("Thank you for returning the book”");
+            return true;
+    }
+
+
 }

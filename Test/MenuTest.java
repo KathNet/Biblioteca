@@ -12,11 +12,29 @@ class MenuTest {
     }
 
     @Test
+    void shouldPrintHelloOnScreen() {
+        //Arrange
+        String TextTest;
+        Menu menu= new Menu();
+
+        //Act
+        TextTest= menu.PrintWelcomeMessage();
+
+        //Assert
+        assertEquals("Welcome to Biblioteca. Your one-stop-shop for great book titles in Bangalore!", TextTest);
+    }
+
+    @Test
     void ReturnMenuInFormatString(){
         //Arrange
         Menu menu = new Menu();
         String MenuReal= new String();
-        String MenuTest= "Chose Option: \n 1)List of Books \n Option: ";
+        String MenuTest= "\nChose Option:\n" +
+                "1)List of Books\n" +
+                "2)CheckOut Book\n" +
+                "3)Return Book \n" +
+                "0)Exit\n"+
+                "Option: ";
 
         //Act
         MenuReal= menu.CreateMenu();
@@ -44,7 +62,7 @@ class MenuTest {
         String Result = new String();
 
         //Act
-        Result= menu.RecibeOptionChooseForUserAndCallTheActionSelect("2");
+        Result= menu.RecibeOptionChooseForUserAndCallTheActionSelect("x");
 
         //Assert
         assertEquals("Please select a valid option!", Result);
@@ -86,5 +104,19 @@ class MenuTest {
 
         // Assert
         assertEquals(false, verification);
+    }
+
+    @Test
+    void CheckNotifiedOnSuccessfulReturn(){
+        //Arrange
+        Book book = new Book("libro1", "1999", "juan");
+        Menu menu = new Menu();
+        boolean verification= false;
+        //Act
+        verification = menu.PrintMessageNotifiedOnSuccessfulReturn(book);
+
+        //Assert
+        assertEquals(true, verification);
+
     }
 }

@@ -3,21 +3,24 @@ import java.util.Scanner;
 public class Main {
 
     public static void main(String[] args) {
-        System.out.print(PrintWelcomeMessage());
+        String option= new String();
         Menu menu= new Menu();
-        menu.CreateMenu();
+        System.out.print(menu.PrintWelcomeMessage());
+        System.out.println(menu.CreateMenu());
         Scanner key = new Scanner(System.in);
-        String Result = menu.RecibeOptionChooseForUserAndCallTheActionSelect(key.toString());
+        option=key.next();
+        String Result = menu.RecibeOptionChooseForUserAndCallTheActionSelect(option);
         if(Result=="Quit Application"){
+            System.out.println("Quit Application");
             System.exit(0);
+        }
+        else {
+            System.out.println(Result);
         }
 
     }
 
-    public static String PrintWelcomeMessage(){
-        String Massage= "Welcome to Biblioteca. Your one-stop-shop for great book titles in Bangalore!";
-        return Massage;
-    }
+
 
 
 
