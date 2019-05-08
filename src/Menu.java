@@ -57,11 +57,15 @@ public class Menu {
     }
 
     public boolean PrintMessageNotifiedOnSuccessfulReturn(Book book){
-            BooksList booksList = new BooksList();
-            booksList.AddBookToTheSystem(book);
-            System.out.println("Thank you for returning the book”");
-            return true;
+            if(book.State==false) {
+                BooksList booksList = new BooksList();
+                booksList.AddBookToTheSystem(book);
+                System.out.println("Thank you for returning the book”");
+                return true;
+            }
+            else {
+                System.out.println("That is not a valid book to return.");
+                return false;
+            }
     }
-
-
 }

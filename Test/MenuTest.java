@@ -110,6 +110,7 @@ class MenuTest {
     void CheckNotifiedOnSuccessfulReturn(){
         //Arrange
         Book book = new Book("libro1", "1999", "juan");
+        book.State=false;
         Menu menu = new Menu();
         boolean verification= false;
         //Act
@@ -117,6 +118,19 @@ class MenuTest {
 
         //Assert
         assertEquals(true, verification);
+    }
 
+    @Test
+    void CheckUnsuccessfulReturn(){
+        //Arrange
+        Book book = new Book("libro1", "1999", "juan");
+        book.State= true;
+        Menu menu = new Menu();
+        boolean verification= false;
+        //Act
+        verification = menu.PrintMessageNotifiedOnSuccessfulReturn(book);
+
+        //Assert
+        assertEquals( false, verification);
     }
 }
