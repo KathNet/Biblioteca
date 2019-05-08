@@ -1,14 +1,46 @@
 public class Book {
 
-    String NameOfBook;
-    String YearOfPublished;
-    String Author;
-    boolean State = true;
+    private String nameOfBook;
+    private String yearOfPublished;
+    private String author;
+    private boolean isAvailable = true;
 
-    public Book(String name, String Year, String Author) {
-        NameOfBook = name;
-        YearOfPublished = Year;
-        Author = Author;
+    public String getNameOfBook() {
+        return nameOfBook;
+    }
+
+    public void setNameOfBook(String nameOfBook) {
+        this.nameOfBook = nameOfBook;
+    }
+
+    public String getYearOfPublished() {
+        return yearOfPublished;
+    }
+
+    public void setYearOfPublished(String yearOfPublished) {
+        this.yearOfPublished = yearOfPublished;
+    }
+
+    public String getAuthor() {
+        return author;
+    }
+
+    public void setAuthor(String author) {
+        this.author = author;
+    }
+
+    public boolean isAvailable() {
+        return isAvailable;
+    }
+
+    public void setAvailable(boolean available) {
+        isAvailable = available;
+    }
+
+    public Book(String name, String year, String author) {
+        setNameOfBook(name);
+        setYearOfPublished(year);
+        setAuthor(author);
     }
 
     public boolean ChangeStateOfBook(boolean StockValue) {
