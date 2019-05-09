@@ -3,7 +3,15 @@ import java.util.List;
 
 public class BookingService {
 
-    static List<Book> collectionBooks = new ArrayList<Book>();
+    private static List<Book> collectionBooks = new ArrayList<Book>();
+
+    public static List<Book> getCollectionBooks() {
+        return collectionBooks;
+    }
+
+    public static void setCollectionBooks(List<Book> collectionBooks) {
+        BookingService.collectionBooks = collectionBooks;
+    }
 
     public static void ChargeInitialBooks(){
         Book book1= new Book("El Ingenioso Hidalgo Don Quijote de la Mancha","1605","Miguel de Cervantes");
