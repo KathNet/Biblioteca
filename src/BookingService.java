@@ -26,4 +26,10 @@ public class BookingService {
         collectionBooks.add(book4);
         collectionBooks.add(book5);
     }
+
+    public static void AddBookToTheSystem(Book book){
+        collectionBooks.add(book);
+    }
+
+
 }

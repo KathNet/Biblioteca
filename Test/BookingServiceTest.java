@@ -6,13 +6,19 @@ class BookingServiceTest {
 
     @Test
     void CheckTheProcedureOfChargeBookInListOfBook(){
-        //Arrage
-
         //Act
         BookingService.ChargeInitialBooks();
-
         //Assert
-        assertEquals(5, BookingService.collectionBooks.size());
+        assertEquals(5, BookingService.getCollectionBooks().size());
     }
 
+    @Test
+    void CheckAddBookInTheSystem(){
+        //Arrange
+        Book book= new Book("","","");
+        //Act
+        BookingService.AddBookToTheSystem(book);
+        //Assert
+        assertEquals(1, BookingService.getCollectionBooks().size());
+    }
 }
