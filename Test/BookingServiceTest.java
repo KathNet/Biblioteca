@@ -15,10 +15,21 @@ class BookingServiceTest {
     @Test
     void CheckAddBookInTheSystem(){
         //Arrange
-        Book book= new Book("","","");
+        Book book= new Book("Chronic Soul","2023","Katherine Pino");
         //Act
         BookingService.AddBookToTheSystem(book);
         //Assert
         assertEquals(1, BookingService.getCollectionBooks().size());
+    }
+
+    @Test
+    void CheckRemoveBookInTheSystem(){
+        //Arrange
+        Book book= new Book("Chronic Blood","2020","Katherine Pino");
+        BookingService.ChargeInitialBooks();
+        //Act
+        BookingService.RemoveBookToTheSystem(book);
+        //Assert
+        assertEquals(4, BookingService.getCollectionBooks().size());
     }
 }

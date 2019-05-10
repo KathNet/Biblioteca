@@ -28,8 +28,24 @@ public class BookingService {
     }
 
     public static void AddBookToTheSystem(Book book){
+
         collectionBooks.add(book);
     }
 
+    public static void RemoveBookToTheSystem(Book book){
+        int index= 0;
+        for (Book searchBook : collectionBooks) {
+            if(searchBook.getNameOfBook().equals(book.getNameOfBook())) {
+                collectionBooks.remove(index);
+                break;
+            }
+        }
+    }
 
+
+    public static Book SearchBookInTheSystem(String nameOfBook){
+        Book book= new Book("","","");
+
+        return book;
+    }
 }

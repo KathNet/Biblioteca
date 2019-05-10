@@ -2,6 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="60ee956e-f868-4397-9777-f0472919c589" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Test/BookingServiceTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/Test/BookingServiceTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/BookingService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/BookingService.java" afterDir="false" />
     </list>
@@ -97,7 +98,7 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Test/MenuTest.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="787">
+            <state relative-caret-position="1830">
               <caret line="126" column="32" selection-start-line="126" selection-start-column="32" selection-end-line="126" selection-end-column="32" />
               <folding>
                 <element signature="imports" expanded="true" />
@@ -109,15 +110,10 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/BookingService.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="356">
-              <caret line="31" column="5" lean-forward="true" selection-start-line="31" selection-start-column="5" selection-end-line="31" selection-end-column="5" />
+            <state relative-caret-position="234">
+              <caret line="31" column="8" selection-start-line="31" selection-start-column="8" selection-end-line="31" selection-end-column="8" />
               <folding>
                 <element signature="imports" expanded="true" />
-                <element signature="e#144#150#0" expanded="true" />
-                <element signature="e#197#198#0" expanded="true" />
-                <element signature="e#235#236#0" expanded="true" />
-                <element signature="e#1079#1080#0" expanded="true" />
-                <element signature="e#1109#1110#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -126,8 +122,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/Test/BookingServiceTest.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="345">
-              <caret line="23" column="1" lean-forward="true" selection-start-line="23" selection-start-column="1" selection-end-line="23" selection-end-column="1" />
+            <state relative-caret-position="212">
+              <caret line="17" column="65" selection-start-line="17" selection-start-column="65" selection-end-line="17" selection-end-column="65" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -188,7 +184,6 @@
     </navigator>
     <panes>
       <pane id="Scope" />
-      <pane id="PackagesPane" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -214,6 +209,7 @@
           <select />
         </subPane>
       </pane>
+      <pane id="PackagesPane" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -249,7 +245,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="JUnit.BookingServiceTest.CheckAddBookInTheSystem">
+  <component name="RunManager" selected="JUnit.BookingServiceTest.CheckRemoveBookInTheSystem">
     <configuration name="All in Biblioteca" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="Biblioteca" />
       <option name="PACKAGE_NAME" value="" />
@@ -268,21 +264,21 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="BookingServiceTest.CheckTheProcedureOfChargeBookInListOfBook" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="BookingServiceTest.CheckRemoveBookInTheSystem" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="Biblioteca" />
       <option name="PACKAGE_NAME" value="" />
       <option name="MAIN_CLASS_NAME" value="BookingServiceTest" />
-      <option name="METHOD_NAME" value="CheckTheProcedureOfChargeBookInListOfBook" />
+      <option name="METHOD_NAME" value="CheckRemoveBookInTheSystem" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="MenuTest.CheckNotifiedOnSuccessfulReturn" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="BookingServiceTest.CheckTheProcedureOfChargeBookInListOfBook" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="Biblioteca" />
       <option name="PACKAGE_NAME" value="" />
-      <option name="MAIN_CLASS_NAME" value="MenuTest" />
-      <option name="METHOD_NAME" value="CheckNotifiedOnSuccessfulReturn" />
+      <option name="MAIN_CLASS_NAME" value="BookingServiceTest" />
+      <option name="METHOD_NAME" value="CheckTheProcedureOfChargeBookInListOfBook" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -300,18 +296,18 @@
     </configuration>
     <list>
       <item itemvalue="JUnit.All in Biblioteca" />
-      <item itemvalue="JUnit.MenuTest.CheckNotifiedOnSuccessfulReturn" />
       <item itemvalue="JUnit.MenuTest.shouldPrintHelloOnScreen" />
       <item itemvalue="JUnit.BookingServiceTest.CheckTheProcedureOfChargeBookInListOfBook" />
       <item itemvalue="JUnit.BookingServiceTest.CheckAddBookInTheSystem" />
+      <item itemvalue="JUnit.BookingServiceTest.CheckRemoveBookInTheSystem" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.BookingServiceTest.CheckRemoveBookInTheSystem" />
         <item itemvalue="JUnit.BookingServiceTest.CheckAddBookInTheSystem" />
         <item itemvalue="JUnit.BookingServiceTest.CheckTheProcedureOfChargeBookInListOfBook" />
         <item itemvalue="JUnit.MenuTest.shouldPrintHelloOnScreen" />
         <item itemvalue="JUnit.All in Biblioteca" />
-        <item itemvalue="JUnit.MenuTest.CheckNotifiedOnSuccessfulReturn" />
       </list>
     </recent_temporary>
   </component>
@@ -329,21 +325,6 @@
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="All_in_Biblioteca - 2019.05.07 at 22h 28m 15s.xml">
-      <configuration name="All in Biblioteca" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="MenuTest_CheckNotifiedOnSuccessfulReturn - 2019.05.07 at 22h 30m 53s.xml">
-      <configuration name="MenuTest.CheckNotifiedOnSuccessfulReturn" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="All_in_Biblioteca - 2019.05.07 at 22h 31m 01s.xml">
-      <configuration name="All in Biblioteca" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="All_in_Biblioteca - 2019.05.08 at 14h 20m 57s.xml">
-      <configuration name="All in Biblioteca" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="MenuTest_shouldPrintHelloOnScreen - 2019.05.08 at 17h 36m 06s.xml">
-      <configuration name="MenuTest.shouldPrintHelloOnScreen" configurationId="JUnit" />
-    </history-entry>
     <history-entry file="BookingServiceTest_CheckTheProcedureOfChargeBookInListOfBook - 2019.05.09 at 12h 48m 19s.xml">
       <configuration name="BookingServiceTest.CheckTheProcedureOfChargeBookInListOfBook" configurationId="JUnit" />
     </history-entry>
@@ -359,21 +340,36 @@
     <history-entry file="BookingServiceTest_CheckAddBookInTheSystem - 2019.05.09 at 13h 18m 34s.xml">
       <configuration name="BookingServiceTest.CheckAddBookInTheSystem" configurationId="JUnit" />
     </history-entry>
+    <history-entry file="BookingServiceTest_CheckRemoveBookInTheSystem - 2019.05.09 at 13h 28m 20s.xml">
+      <configuration name="BookingServiceTest.CheckRemoveBookInTheSystem" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="BookingServiceTest_CheckRemoveBookInTheSystem - 2019.05.10 at 15h 18m 24s.xml">
+      <configuration name="BookingServiceTest.CheckRemoveBookInTheSystem" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="BookingServiceTest_CheckRemoveBookInTheSystem - 2019.05.10 at 15h 47m 15s.xml">
+      <configuration name="BookingServiceTest.CheckRemoveBookInTheSystem" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="BookingServiceTest_CheckRemoveBookInTheSystem - 2019.05.10 at 15h 48m 13s.xml">
+      <configuration name="BookingServiceTest.CheckRemoveBookInTheSystem" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="BookingServiceTest_CheckRemoveBookInTheSystem - 2019.05.10 at 15h 49m 16s.xml">
+      <configuration name="BookingServiceTest.CheckRemoveBookInTheSystem" configurationId="JUnit" />
+    </history-entry>
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="23" width="1680" height="956" extended-state="0" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.49655172" visible="true" weight="0.26495728" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.4976852" visible="true" weight="0.26800978" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Image Layers" order="2" />
       <window_info id="Designer" order="3" />
       <window_info id="UI Designer" order="4" />
       <window_info id="Capture Tool" order="5" />
-      <window_info id="Favorites" order="6" sideWeight="0.50344825" side_tool="true" visible="true" weight="0.26495728" />
+      <window_info id="Favorites" order="6" sideWeight="0.5023148" side_tool="true" weight="0.26495728" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.3287037" />
+      <window_info anchor="bottom" id="Run" order="2" visible="true" weight="0.3287037" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -433,26 +429,17 @@
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
     <entry file="file://$PROJECT_DIR$/Test/MainTest.java" />
+    <entry file="file://$PROJECT_DIR$/src/Main.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="90">
+          <caret line="6" column="23" selection-start-line="6" selection-start-column="23" selection-end-line="6" selection-end-column="23" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/Menu.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="885">
           <caret line="59" column="43" selection-start-line="59" selection-start-column="43" selection-end-line="59" selection-end-column="43" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/BooksList.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="300">
-          <caret line="29" column="57" selection-start-line="29" selection-start-column="57" selection-end-line="29" selection-end-column="57" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#168#169#0" expanded="true" />
-            <element signature="e#199#200#0" expanded="true" />
-            <element signature="e#251#252#0" expanded="true" />
-            <element signature="e#286#287#0" expanded="true" />
-            <element signature="e#461#462#0" expanded="true" />
-            <element signature="e#500#501#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -479,7 +466,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/Test/MenuTest.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="787">
+        <state relative-caret-position="1830">
           <caret line="126" column="32" selection-start-line="126" selection-start-column="32" selection-end-line="126" selection-end-column="32" />
           <folding>
             <element signature="imports" expanded="true" />
@@ -487,10 +474,19 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Main.java">
+    <entry file="file://$PROJECT_DIR$/src/BooksList.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="90">
-          <caret line="6" column="23" selection-start-line="6" selection-start-column="23" selection-end-line="6" selection-end-column="23" />
+        <state relative-caret-position="300">
+          <caret line="29" column="57" selection-start-line="29" selection-start-column="57" selection-end-line="29" selection-end-column="57" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#168#169#0" expanded="true" />
+            <element signature="e#199#200#0" expanded="true" />
+            <element signature="e#251#252#0" expanded="true" />
+            <element signature="e#286#287#0" expanded="true" />
+            <element signature="e#461#462#0" expanded="true" />
+            <element signature="e#500#501#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -506,23 +502,18 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/BookingService.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="356">
-          <caret line="31" column="5" lean-forward="true" selection-start-line="31" selection-start-column="5" selection-end-line="31" selection-end-column="5" />
+        <state relative-caret-position="234">
+          <caret line="31" column="8" selection-start-line="31" selection-start-column="8" selection-end-line="31" selection-end-column="8" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#144#150#0" expanded="true" />
-            <element signature="e#197#198#0" expanded="true" />
-            <element signature="e#235#236#0" expanded="true" />
-            <element signature="e#1079#1080#0" expanded="true" />
-            <element signature="e#1109#1110#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/Test/BookingServiceTest.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="345">
-          <caret line="23" column="1" lean-forward="true" selection-start-line="23" selection-start-column="1" selection-end-line="23" selection-end-column="1" />
+        <state relative-caret-position="212">
+          <caret line="17" column="65" selection-start-line="17" selection-start-column="65" selection-end-line="17" selection-end-column="65" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
