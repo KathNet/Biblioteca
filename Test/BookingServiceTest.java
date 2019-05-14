@@ -28,7 +28,7 @@ class BookingServiceTest {
         Book book= new Book("Chronic Blood","2020","Katherine Pino");
         BookingService.ChargeInitialBooks();
         //Act
-        BookingService.RemoveBookToTheSystem(book);
+        BookingService.RemoveBookToTheSystem("Chronic Blood");
         //Assert
         assertEquals(4, BookingService.getCollectionBooks().size());
     }

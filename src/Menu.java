@@ -1,4 +1,4 @@
-import java.util.List;
+import java.util.Scanner;
 
 public class Menu {
 
@@ -18,32 +18,62 @@ public class Menu {
         return Massage;
     }
 
-
-    public String RecibeOptionChooseForUserAndCallTheActionSelect(String option) {
-        String Message= "Please select a valid option!";
-        if(option.equals("0")) {
-            Message="Quit Application";
-        }
-        if (option.equals("1")) {
-            BooksList booksList = new BooksList();
-            Message = ReturnListOfBooksInScreen(booksList.ReturnAListOfBooksInSystem());
-        }
-        if(option.equals("2")){
-            Message="Write the name of book: \n";
-        }
-        if(option.equals("3")){
-            Message= "Return Book: \n";
-        }
-        return Message;
+    public String PrintErrorChoiceMessage(){
+        String massage= "Please select a valid option!";
+        return massage;
     }
 
-    public String ReturnListOfBooksInScreen(List<Book> ListBook) {
-        String CollectionOfBooks = new String();
-        for (int i=0; i<CollectionOfBooks.length(); i++) {
-            CollectionOfBooks+=ListBook.get(i).getNameOfBook()+" "+ListBook.get(i).getAuthor()+" "+ListBook.get(i).getYearOfPublished()+" \n";
+
+    public void RecibeOptionChooseForUserAndCallTheActionSelect(String option) {
+        Scanner scanner = new Scanner(System.in);
+        boolean verification= false;
+        switch (option){
+            case "0":
+                System.out.println("Quit Application");
+                break;
+            case "1":
+                System.out.println("List of Books:  \n");
+                PrintCollectionBooks();
+                break;
+            case "2":
+                System.out.println("Checkout Book \n");
+                System.out.println("List of Books:  \n");
+                PrintCollectionBooks();
+                System.out.println("----------------------------------------------");
+                System.out.println("Name of Book: \n");
+                String nameBook= scanner.nextLine();
+                verification = BookingService.RemoveBookToTheSystem(nameBook);
+                PrintMessageAboutCheckout(verification);
+                PrintCollectionBooks();
+                break;
+            case "3":
+                System.out.println("Return Book \n");
+                System.out.println("List of Books:  \n");
+                PrintCollectionBooks();
+                System.out.println("----------------------------------------------");
+                System.out.println("Name of Book: \n");
+                String nameOfBook= scanner.nextLine();
+                System.out.println("Date: \n");
+                String date= scanner.nextLine();
+                System.out.println("Author: \n");
+                String author= scanner.nextLine();
+                Book book = new Book(nameOfBook, date,author);
+                verification = BookingService.AddBookToTheSystem(book);
+                PrintMessageAboutAddBook(verification);
+                PrintCollectionBooks();
+                break;
+            default:
+                System.out.println(this.PrintErrorChoiceMessage());
+                break;
         }
-        return CollectionOfBooks;
     }
+
+    public void PrintCollectionBooks(){
+        for (Book item:BookingService.getCollectionBooks()) {
+            System.out.println(item.getNameOfBook()+ " "+item.getYearOfPublished() +" "+ item.getAuthor());
+        }
+    }
+
 
     public boolean PrintMessageAboutCheckout(boolean verification){
             if(verification){
@@ -51,21 +81,21 @@ public class Menu {
                 return true;
             }
             else {
-                System.out.println("Unsuccessful message on checkout of a book");
+                System.out.println("Sorry, that book is not available");
                 return false;
             }
     }
 
-    public boolean PrintMessageNotifiedOnSuccessfulReturn(Book book){
-            if(book.getIsAvailable()==false) {
-                BooksList booksList = new BooksList();
-                booksList.AddBookToTheSystem(book);
-                System.out.println("Thank you for returning the book”");
-                return true;
-            }
-            else {
-                System.out.println("That is not a valid book to return.");
-                return false;
-            }
+    public boolean PrintMessageAboutAddBook(boolean verification){
+        if(verification){
+            System.out.println("Thank you for returning the book");
+            return true;
+        }
+        else {
+            System.out.println("That is not a valid book to return");
+            return false;
+        }
     }
+
+
 }

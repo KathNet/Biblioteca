@@ -25,6 +25,20 @@ class MenuTest {
     }
 
     @Test
+    void shouldPrintPleaseSelectAInvalidOptionMessage() {
+        //Arrange
+        Menu menu = new Menu();
+        String validation="";
+
+        //Act
+        validation= menu.PrintErrorChoiceMessage();
+
+        //Assert
+        assertEquals("Please select a valid option!", validation);
+    }
+
+
+    @Test
     void ReturnMenuInFormatString(){
         //Arrange
         Menu menu = new Menu();
@@ -44,45 +58,6 @@ class MenuTest {
     }
 
     @Test
-    void CheckValidOptionOneMessage(){
-        //Arrange
-        Menu menu = new Menu();
-        String Result = new String();
-        //Act
-        Result= menu.RecibeOptionChooseForUserAndCallTheActionSelect("1");
-
-        //Assert
-        assertEquals("", Result);
-    }
-
-    @Test
-    void CheckInvalidOptionMessage(){
-        //Arrange
-        Menu menu = new Menu();
-        String Result = new String();
-
-        //Act
-        Result= menu.RecibeOptionChooseForUserAndCallTheActionSelect("x");
-
-        //Assert
-        assertEquals("Please select a valid option!", Result);
-    }
-
-
-    @Test
-    public void systemExitWithArbitraryStatusCode() {
-        //Arrange
-        Menu menu = new Menu();
-        String Result = new String();
-
-        //Act
-        Result= menu.RecibeOptionChooseForUserAndCallTheActionSelect("0");
-
-        //Assert
-        assertEquals("Quit Application", Result);
-    }
-
-    @Test
     void CheckSuccessMessageOnCheckoutOfABook(){
         //Arrange
         Menu menu= new Menu();
@@ -95,7 +70,7 @@ class MenuTest {
     }
 
     @Test
-    void CheckUnsuccessfulMessage(){
+    void CheckUnsuccessfulMessageChekoutOfBook(){
         //Arrange
         Menu menu= new Menu();
         boolean verification= true;
@@ -107,30 +82,28 @@ class MenuTest {
     }
 
     @Test
-    void CheckNotifiedOnSuccessfulReturn(){
+    void CheckSuccessReturnOnCheckoutOfABook(){
         //Arrange
-        Book book = new Book("libro1", "1999", "juan");
-        book.setAvailable(false);
-        Menu menu = new Menu();
+        Menu menu= new Menu();
         boolean verification= false;
-        //Act
-        verification = menu.PrintMessageNotifiedOnSuccessfulReturn(book);
+        // Act
+        verification=menu.PrintMessageAboutAddBook(true);
 
-        //Assert
+        // Assert
         assertEquals(true, verification);
     }
 
     @Test
-    void CheckUnsuccessfulReturn(){
+    void CheckUnsuccessfulReturnMessageBook(){
         //Arrange
-        Book book = new Book("libro1", "1999", "juan");
-        book.setAvailable(true);
-        Menu menu = new Menu();
-        boolean verification= false;
-        //Act
-        verification = menu.PrintMessageNotifiedOnSuccessfulReturn(book);
+        Menu menu= new Menu();
+        boolean verification= true;
+        // Act
+        verification=menu.PrintMessageAboutAddBook(false);
 
-        //Assert
-        assertEquals( false, verification);
+        // Assert
+        assertEquals(false, verification);
     }
+
+
 }
