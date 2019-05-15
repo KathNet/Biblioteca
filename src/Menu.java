@@ -8,6 +8,7 @@ public class Menu {
                 "1)List of Books\n" +
                 "2)CheckOut Book\n" +
                 "3)Return Book \n" +
+                "4)List of Movies \n"+
                 "0)Exit\n"+
                 "Option: ";
         return Menu;
@@ -62,6 +63,10 @@ public class Menu {
                 PrintMessageAboutAddBook(verification);
                 PrintCollectionBooks();
                 break;
+            case "4":
+                System.out.println("List of Movies \n");
+                PrintCollectionMovies();
+                break;
             default:
                 System.out.println(this.PrintErrorChoiceMessage());
                 break;
@@ -74,6 +79,11 @@ public class Menu {
         }
     }
 
+    public void PrintCollectionMovies(){
+        for (Movie movie: MovieService.getMovieList()) {
+            System.out.println(movie.getNameMovie()+" "+movie.getYear()+" "+movie.getDirector()+" "+movie.getRanting());
+        }
+    }
 
     public boolean PrintMessageAboutCheckout(boolean verification){
             if(verification){

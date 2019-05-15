@@ -6,11 +6,13 @@ public class Main {
 
     public static void main(String[] args) {
         BookingService.ChargeInitialBooks();
+        MovieService.ChargeDefaultMovieList();
         List<String> optionSelection= new ArrayList<>();
         optionSelection.add("0");
         optionSelection.add("1");
         optionSelection.add("2");
         optionSelection.add("3");
+        optionSelection.add("4");
         String option="";
         String stringLoad="";
         Scanner scanner= new Scanner(System.in);
@@ -23,8 +25,5 @@ public class Main {
         } while(!optionSelection.contains(option));
 
         menu.RecibeOptionChooseForUserAndCallTheActionSelect(option);
-
-
-
         }
 }

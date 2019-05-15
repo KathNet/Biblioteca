@@ -43,10 +43,11 @@ class MenuTest {
         //Arrange
         Menu menu = new Menu();
         String MenuReal= new String();
-        String MenuTest= "\nChose Option:\n" +
+        String MenuTest = "\nChose Option:\n" +
                 "1)List of Books\n" +
                 "2)CheckOut Book\n" +
                 "3)Return Book \n" +
+                "4)List of Movies \n"+
                 "0)Exit\n"+
                 "Option: ";
 
