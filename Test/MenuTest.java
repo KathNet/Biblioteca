@@ -48,6 +48,7 @@ class MenuTest {
                 "2)CheckOut Book\n" +
                 "3)Return Book \n" +
                 "4)List of Movies \n"+
+                "5)CheckOut Movie: \n"+
                 "0)Exit\n"+
                 "Option: ";
 

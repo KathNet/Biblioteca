@@ -9,6 +9,7 @@ public class Menu {
                 "2)CheckOut Book\n" +
                 "3)Return Book \n" +
                 "4)List of Movies \n"+
+                "5)CheckOut Movie: \n"+
                 "0)Exit\n"+
                 "Option: ";
         return Menu;
@@ -65,6 +66,17 @@ public class Menu {
                 break;
             case "4":
                 System.out.println("List of Movies \n");
+                PrintCollectionMovies();
+                break;
+            case "5":
+                System.out.println("CheckOutMovies \n");
+                System.out.println("List of Movies \n");
+                PrintCollectionMovies();
+                System.out.println("----------------------------------------------");
+                System.out.println("Name of Movie:");
+                String nameOfMovie= scanner.nextLine();
+                MovieService.RemoveMovieToTheSystem(nameOfMovie);
+                System.out.println("----------------------------------------------");
                 PrintCollectionMovies();
                 break;
             default:
