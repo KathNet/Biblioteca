@@ -28,5 +28,16 @@ public class MovieService {
         movieList.add(movie5);
     }
 
+    public static boolean RemoveMovieToTheSystem(String nameOfMovie) {
+        int index = 0;
+        for (Movie movie : getMovieList()) {
+            if (movie.getNameMovie().equals(nameOfMovie)) {
+                getMovieList().remove(index);
+                return true;
+            }
+            index++;
+        }
+        return false;
+    }
 
 }
