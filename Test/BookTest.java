@@ -4,22 +4,25 @@ import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
 class BookTest {
+
     @BeforeEach
     void setUp(){
     }
 
+    // __SHOULD__RETURN_____WHEN/GIVEN_______
+    // __RETURNS/HANDLES/MANAGES______WHEN/GIVEN_______
     @Test
-    void ChangeStateOfBook() {
+    void shouldReturnNewStateWhenBookChangesState() {
 
         //Arrange
         Book book = new Book("GOT", "Pancho", "1990");
-        boolean verification= true;
+        boolean bookState;
 
         //Act
-        verification= book.ChangeStateOfBook(false);
+        bookState = book.changeStateOfBook(false);
 
         //Assert
-        assertEquals(false, verification);
+        assertEquals(false, bookState);
     }
 
 }

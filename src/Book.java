@@ -43,7 +43,7 @@ public class Book {
         setAuthor(author);
     }
 
-    public boolean ChangeStateOfBook(boolean StockValue) {
+    public boolean changeStateOfBook(boolean StockValue) {
         StockValue = StockValue;
         return StockValue;
     }
