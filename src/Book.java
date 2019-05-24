@@ -29,10 +29,6 @@ public class Book {
         this.author = author;
     }
 
-    public boolean getIsAvailable() {
-        return isAvailable;
-    }
-
     public void setAvailable(boolean available) {
         isAvailable = available;
     }
@@ -47,6 +43,4 @@ public class Book {
         StockValue = StockValue;
         return StockValue;
     }
-
-
 }

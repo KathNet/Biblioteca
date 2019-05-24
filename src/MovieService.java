@@ -9,11 +9,7 @@ public class MovieService {
         return movieList;
     }
 
-    public static void setMovieList(List<Movie> movieList) {
-        MovieService.movieList = movieList;
-    }
-
-    public static void ChargeDefaultMovieList(){
+    public static void chargeDefaultMovieList(){
         getMovieList().clear();
         Movie movie1= new Movie("Superman","1978","Richard Donner","10");
         Movie movie2= new Movie("Pokémon the Movie: The Power of Us","2018","Tetsuo Yajima","5");
@@ -28,7 +24,7 @@ public class MovieService {
         movieList.add(movie5);
     }
 
-    public static boolean RemoveMovieToTheSystem(String nameOfMovie) {
+    public static boolean removeMovieToTheSystem(String nameOfMovie) {
         int index = 0;
         for (Movie movie : getMovieList()) {
             if (movie.getNameMovie().equals(nameOfMovie)) {

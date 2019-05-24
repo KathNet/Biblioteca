@@ -10,9 +10,6 @@ public class User {
         return credential;
     }
 
-    public void setCredential(String credential) {
-        this.credential = credential;
-    }
 
     public String getPasswordUser() {
         return passwordUser;
@@ -29,24 +26,13 @@ public class User {
         this.credential = credential;
     }
 
-    public String getName() {
-        return name;
-    }
 
     public void setName(String name) {
         this.name = name;
     }
 
-    public String getEmail() {
-        return email;
-    }
-
     public void setEmail(String email) {
         this.email = email;
-    }
-
-    public String getPhone() {
-        return phone;
     }
 
     public void setPhone(String phone) {

@@ -9,11 +9,7 @@ public class BookingService {
         return collectionBooks;
     }
 
-    public static void setCollectionBooks(List<Book> collectionBooks) {
-        BookingService.collectionBooks = collectionBooks;
-    }
-
-    public static void ChargeInitialBooks() {
+    public static void chargeInitialBooks() {
         collectionBooks.clear();
         Book book1 = new Book("El Ingenioso Hidalgo Don Quijote de la Mancha", "1605", "Miguel de Cervantes");
         Book book2 = new Book("El Poema de mio Cid", "1140", "Unknown");
@@ -28,12 +24,12 @@ public class BookingService {
         collectionBooks.add(book5);
     }
 
-    public static boolean AddBookToTheSystem(Book book) {
+    public static boolean addBookToTheSystem(Book book) {
         collectionBooks.add(book);
         return true;
     }
 
-    public static boolean RemoveBookToTheSystem(String nameBook) {
+    public static boolean removeBookToTheSystem(String nameBook) {
         int index = 0;
         for (Book searchBook : collectionBooks) {
             if (searchBook.getNameOfBook().equals(nameBook)) {

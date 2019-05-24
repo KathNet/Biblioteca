@@ -18,7 +18,7 @@ class MenuTest {
         Menu menu= new Menu();
 
         //Act
-        TextTest= menu.PrintWelcomeMessage();
+        TextTest= menu.printWelcomeMessage();
 
         //Assert
         assertEquals("Welcome to Biblioteca. Your one-stop-shop for great book titles in Bangalore!", TextTest);
@@ -31,7 +31,7 @@ class MenuTest {
         String validation="";
 
         //Act
-        validation= menu.PrintErrorChoiceMessage();
+        validation= menu.printErrorChoiceMessage();
 
         //Assert
         assertEquals("Please select a valid option!", validation);
@@ -39,7 +39,7 @@ class MenuTest {
 
 
     @Test
-    void ReturnMenuInFormatString(){
+    void returnMenuInFormatString(){
         //Arrange
         Menu menu = new Menu();
         String MenuReal= new String();
@@ -53,55 +53,55 @@ class MenuTest {
                 "Option: ";
 
         //Act
-        MenuReal= menu.CreateMenu();
+        MenuReal= menu.createMenu();
 
         //Assert
         assertTrue(MenuReal.equals(MenuTest));
     }
 
     @Test
-    void CheckSuccessMessageOnCheckoutOfABook(){
+    void checkSuccessMessageOnCheckoutOfABook(){
         //Arrange
         Menu menu= new Menu();
         boolean verification= false;
         // Act
-        verification=menu.PrintMessageAboutCheckout(true);
+        verification=menu.printMessageAboutCheckout(true);
 
         // Assert
         assertEquals(true, verification);
     }
 
     @Test
-    void CheckUnsuccessfulMessageChekoutOfBook(){
+    void checkUnsuccessfulMessageChekoutOfBook(){
         //Arrange
         Menu menu= new Menu();
         boolean verification= true;
         // Act
-        verification=menu.PrintMessageAboutCheckout(false);
+        verification=menu.printMessageAboutCheckout(false);
 
         // Assert
         assertEquals(false, verification);
     }
 
     @Test
-    void CheckSuccessReturnOnCheckoutOfABook(){
+    void checkSuccessReturnOnCheckoutOfABook(){
         //Arrange
         Menu menu= new Menu();
         boolean verification= false;
         // Act
-        verification=menu.PrintMessageAboutAddBook(true);
+        verification=menu.printMessageAboutAddBook(true);
 
         // Assert
         assertEquals(true, verification);
     }
 
     @Test
-    void CheckUnsuccessfulReturnMessageBook(){
+    void checkUnsuccessfulReturnMessageBook(){
         //Arrange
         Menu menu= new Menu();
         boolean verification= true;
         // Act
-        verification=menu.PrintMessageAboutAddBook(false);
+        verification=menu.printMessageAboutAddBook(false);
 
         // Assert
         assertEquals(false, verification);

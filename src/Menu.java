@@ -2,7 +2,7 @@ import java.util.Scanner;
 
 public class Menu {
 
-    public String CreateMenu() {
+    public String createMenu() {
         String Menu = new String();
         Menu = "\nChose Option:\n" +
                 "1)List of Books\n" +
@@ -15,18 +15,18 @@ public class Menu {
         return Menu;
     }
 
-    public String PrintWelcomeMessage(){
+    public String printWelcomeMessage(){
         String Massage= "Welcome to Biblioteca. Your one-stop-shop for great book titles in Bangalore!";
         return Massage;
     }
 
-    public String PrintErrorChoiceMessage(){
+    public String printErrorChoiceMessage(){
         String massage= "Please select a valid option!";
         return massage;
     }
 
 
-    public void RecibeOptionChooseForUserAndCallTheActionSelect(String option) {
+    public void receiveOptionChooseForUserAndCallTheActionSelect(String option) {
         Scanner scanner = new Scanner(System.in);
         boolean verification= false;
         String credential;
@@ -37,22 +37,22 @@ public class Menu {
                 break;
             case "1":
                 System.out.println("List of Books:  \n");
-                PrintCollectionBooks();
+                printCollectionBooks();
                 break;
             case "2":
                 System.out.println("Checkout Book \n" + "User: \n");
                 credential= scanner.nextLine();
                 System.out.println("Password: \n");
                 password= scanner.nextLine();
-                if(UserService.VerificationOfUserAdminAndPass(credential, password)) {
+                if(UserService.verificationOfUserAdminAndPass(credential, password)) {
                     System.out.println("List of Books:  \n");
-                    PrintCollectionBooks();
+                    printCollectionBooks();
                     System.out.println("----------------------------------------------");
                     System.out.println("Name of Book: \n");
                     String nameBook= scanner.nextLine();
-                    verification = BookingService.RemoveBookToTheSystem(nameBook);
-                    PrintMessageAboutCheckout(verification);
-                    PrintCollectionBooks();
+                    verification = BookingService.removeBookToTheSystem(nameBook);
+                    printMessageAboutCheckout(verification);
+                    printCollectionBooks();
                 }
                 else{
                     System.out.println("Credential fail");
@@ -63,9 +63,9 @@ public class Menu {
                 credential= scanner.nextLine();
                 System.out.println("Password: \n");
                 password= scanner.nextLine();
-                if(UserService.VerificationOfUserAdminAndPass(credential, password)) {
+                if(UserService.verificationOfUserAdminAndPass(credential, password)) {
                     System.out.println("List of Books:  \n");
-                    PrintCollectionBooks();
+                    printCollectionBooks();
                     System.out.println("----------------------------------------------");
                     System.out.println("Name of Book: \n");
                     String nameOfBook = scanner.nextLine();
@@ -74,9 +74,9 @@ public class Menu {
                     System.out.println("Author: \n");
                     String author = scanner.nextLine();
                     Book book = new Book(nameOfBook, date, author);
-                    verification = BookingService.AddBookToTheSystem(book);
-                    PrintMessageAboutAddBook(verification);
-                    PrintCollectionBooks();
+                    verification = BookingService.addBookToTheSystem(book);
+                    printMessageAboutAddBook(verification);
+                    printCollectionBooks();
                 }
                 else{
                     System.out.println("Credential Fail");
@@ -84,38 +84,38 @@ public class Menu {
                 break;
             case "4":
                 System.out.println("List of Movies \n");
-                PrintCollectionMovies();
+                printCollectionMovies();
                 break;
             case "5":
                 System.out.println("CheckOutMovies \n");
                 System.out.println("List of Movies \n");
-                PrintCollectionMovies();
+                printCollectionMovies();
                 System.out.println("----------------------------------------------");
                 System.out.println("Name of Movie:");
                 String nameOfMovie= scanner.nextLine();
-                MovieService.RemoveMovieToTheSystem(nameOfMovie);
+                MovieService.removeMovieToTheSystem(nameOfMovie);
                 System.out.println("----------------------------------------------");
-                PrintCollectionMovies();
+                printCollectionMovies();
                 break;
             default:
-                System.out.println(this.PrintErrorChoiceMessage());
+                System.out.println(this.printErrorChoiceMessage());
                 break;
         }
     }
 
-    public void PrintCollectionBooks(){
+    public void printCollectionBooks(){
         for (Book item:BookingService.getCollectionBooks()) {
             System.out.println(item.getNameOfBook()+ " "+item.getYearOfPublished() +" "+ item.getAuthor());
         }
     }
 
-    public void PrintCollectionMovies(){
+    public void printCollectionMovies(){
         for (Movie movie: MovieService.getMovieList()) {
             System.out.println(movie.getNameMovie()+" "+movie.getYear()+" "+movie.getDirector()+" "+movie.getRanting());
         }
     }
 
-    public boolean PrintMessageAboutCheckout(boolean verification){
+    public boolean printMessageAboutCheckout(boolean verification){
             if(verification){
                 System.out.println("Thank you! Enjoy the book");
                 return true;
@@ -126,7 +126,7 @@ public class Menu {
             }
     }
 
-    public boolean PrintMessageAboutAddBook(boolean verification){
+    public boolean printMessageAboutAddBook(boolean verification){
         if(verification){
             System.out.println("Thank you for returning the book");
             return true;
@@ -136,8 +136,4 @@ public class Menu {
             return false;
         }
     }
-
-
-
-
 }

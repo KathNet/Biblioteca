@@ -5,9 +5,9 @@ import java.util.Scanner;
 public class Main {
 
     public static void main(String[] args) {
-        UserService.DefaultUserCharge();
-        BookingService.ChargeInitialBooks();
-        MovieService.ChargeDefaultMovieList();
+        UserService.defaultUserCharge();
+        BookingService.chargeInitialBooks();
+        MovieService.chargeDefaultMovieList();
         List<String> optionSelection= new ArrayList<>();
         optionSelection.add("0");
         optionSelection.add("1");
@@ -21,11 +21,11 @@ public class Main {
         Menu menu= new Menu();
 
         do {
-            menu.PrintWelcomeMessage();
-            System.out.println(stringLoad =menu.CreateMenu());
+            menu.printWelcomeMessage();
+            System.out.println(stringLoad =menu.createMenu());
             option= scanner.next();
         } while(!optionSelection.contains(option));
 
-        menu.RecibeOptionChooseForUserAndCallTheActionSelect(option);
+        menu.receiveOptionChooseForUserAndCallTheActionSelect(option);
         }
 }
