@@ -1,3 +1,4 @@
+import cli.Menu;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
@@ -45,10 +46,10 @@ class MenuTest {
         String MenuReal= new String();
         String MenuTest = "\nChose Option:\n" +
                 "1)List of Books\n" +
-                "2)CheckOut Book\n" +
-                "3)Return Book \n" +
+                "2)CheckOut domain.Book\n" +
+                "3)Return domain.Book \n" +
                 "4)List of Movies \n"+
-                "5)CheckOut Movie: \n"+
+                "5)CheckOut domain.Movie: \n"+
                 "0)Exit\n"+
                 "Option: ";
 

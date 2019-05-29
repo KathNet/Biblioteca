@@ -1,4 +1,6 @@
+import domain.Book;
 import org.junit.jupiter.api.Test;
+import service.BookingService;
 
 import static org.junit.jupiter.api.Assertions.*;
 

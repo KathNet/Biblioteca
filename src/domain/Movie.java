@@ -1,3 +1,5 @@
+package domain;
+
 public class Movie {
 
     private String nameMovie="";

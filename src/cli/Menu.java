@@ -1,6 +1,13 @@
+package cli;
+
+import domain.Book;
+import domain.Movie;
+
 import java.util.Scanner;
 
 public class Menu {
+
+    private
 
     public String createMenu() {
         String Menu = new String();
@@ -9,7 +16,7 @@ public class Menu {
                 "2)CheckOut Book\n" +
                 "3)Return Book \n" +
                 "4)List of Movies \n"+
-                "5)CheckOut Movie: \n"+
+                "5)CheckOut domain.Movie: \n"+
                 "0)Exit\n"+
                 "Option: ";
         return Menu;
@@ -25,6 +32,9 @@ public class Menu {
         return massage;
     }
 
+    public String printQuestionContinue(){
+        return "do you want to continue with program?";
+    }
 
     public void receiveOptionChooseForUserAndCallTheActionSelect(String option) {
         Scanner scanner = new Scanner(System.in);
@@ -40,7 +50,7 @@ public class Menu {
                 printCollectionBooks();
                 break;
             case "2":
-                System.out.println("Checkout Book \n" + "User: \n");
+                System.out.println("Checkout domain.Book \n" + "domain.User: \n");
                 credential= scanner.nextLine();
                 System.out.println("Password: \n");
                 password= scanner.nextLine();
@@ -48,7 +58,7 @@ public class Menu {
                     System.out.println("List of Books:  \n");
                     printCollectionBooks();
                     System.out.println("----------------------------------------------");
-                    System.out.println("Name of Book: \n");
+                    System.out.println("Name of domain.Book: \n");
                     String nameBook= scanner.nextLine();
                     verification = BookingService.removeBookToTheSystem(nameBook);
                     printMessageAboutCheckout(verification);
@@ -59,7 +69,7 @@ public class Menu {
                 }
                 break;
             case "3":
-                System.out.println("Return Book \n" + "User: \n");
+                System.out.println("Return domain.Book \n" + "domain.User: \n");
                 credential= scanner.nextLine();
                 System.out.println("Password: \n");
                 password= scanner.nextLine();
@@ -67,7 +77,7 @@ public class Menu {
                     System.out.println("List of Books:  \n");
                     printCollectionBooks();
                     System.out.println("----------------------------------------------");
-                    System.out.println("Name of Book: \n");
+                    System.out.println("Name of domain.Book: \n");
                     String nameOfBook = scanner.nextLine();
                     System.out.println("Date: \n");
                     String date = scanner.nextLine();
@@ -91,7 +101,7 @@ public class Menu {
                 System.out.println("List of Movies \n");
                 printCollectionMovies();
                 System.out.println("----------------------------------------------");
-                System.out.println("Name of Movie:");
+                System.out.println("Name of domain.Movie:");
                 String nameOfMovie= scanner.nextLine();
                 MovieService.removeMovieToTheSystem(nameOfMovie);
                 System.out.println("----------------------------------------------");
@@ -104,7 +114,7 @@ public class Menu {
     }
 
     public void printCollectionBooks(){
-        for (Book item:BookingService.getCollectionBooks()) {
+        for (Book item: BookingService.getCollectionBooks()) {
             System.out.println(item.getNameOfBook()+ " "+item.getYearOfPublished() +" "+ item.getAuthor());
         }
     }

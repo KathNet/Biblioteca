@@ -1,3 +1,7 @@
+package service;
+
+import domain.User;
+
 import java.util.ArrayList;
 import java.util.List;
 
@@ -20,6 +24,7 @@ public class UserService {
        if(getUsers().get(0).getCredential().equals(credential) && getUsers().get(0).getPasswordUser().equals(pass)){
            return true;
        }
+
        return false;
     }
 
