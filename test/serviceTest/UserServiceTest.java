@@ -1,3 +1,5 @@
+package serviceTest;
+
 import org.junit.jupiter.api.Test;
 import service.UserService;
 
@@ -9,7 +11,7 @@ class UserServiceTest {
     void checkDefaultUser(){
         //Arrange
         //Act
-        UserService.defaultUserCharge();
+        UserService.loadDefaultUsers();
         //Assert
         assertEquals(1, UserService.getUsers().size());
     }
@@ -18,7 +20,7 @@ class UserServiceTest {
     void checkVerificationOfUserAndPassword()
     {
         //Arrange
-        UserService.defaultUserCharge();
+        UserService.loadDefaultUsers();
         //Act
         //Assert
         assertEquals(true, UserService.verificationOfUserAdminAndPass("xxx-xxxx", "xxx"));
@@ -28,7 +30,7 @@ class UserServiceTest {
     void checkFailVerificationOfUserAndPassword()
     {
         //Arrange
-        UserService.defaultUserCharge();
+        UserService.loadDefaultUsers();
         //Act
         //Assert
         assertEquals(false, UserService.verificationOfUserAdminAndPass("xxxxxxx", "xxx"));
@@ -38,7 +40,7 @@ class UserServiceTest {
     void checkCorrectSearchInListOfUser(){
         //Arrange
         //Act
-        UserService.defaultUserCharge();
+        UserService.loadDefaultUsers();
         // Assert
         assertEquals(true, UserService.searchInListOfUserForOneUser("xxx-xxxx","xxx"));
     }

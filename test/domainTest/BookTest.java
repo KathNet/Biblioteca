@@ -1,3 +1,5 @@
+package domainTest;
+
 import domain.Book;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;

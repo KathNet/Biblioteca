@@ -1,3 +1,5 @@
+package serviceTest;
+
 import org.junit.jupiter.api.Test;
 import service.MovieService;
 
@@ -9,7 +11,7 @@ class MovieServiceTest {
     void chargeInitialListOfBook(){
         //Arrange
         //Act
-        MovieService.chargeDefaultMovieList();
+        MovieService.loadDefaultMovieList();
         //Assert
         assertEquals(5, MovieService.getMovieList().size());
     }
@@ -17,7 +19,7 @@ class MovieServiceTest {
     @Test
     void checkoutMovieSuccess(){
         //Arrange
-        MovieService.chargeDefaultMovieList();
+        MovieService.loadDefaultMovieList();
         //Act
         //Assert
         assertEquals(true, MovieService.removeMovieToTheSystem("Superman"));
@@ -26,7 +28,7 @@ class MovieServiceTest {
     @Test
     void checkoutMovieFail(){
         //Arrange
-        MovieService.chargeDefaultMovieList();
+        MovieService.loadDefaultMovieList();
         //Act
         //Assert
         assertEquals(false, MovieService.removeMovieToTheSystem("Superman2"));

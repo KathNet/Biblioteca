@@ -14,7 +14,7 @@ public class MovieService {
         return movieList;
     }
 
-    public static void chargeDefaultMovieList(){
+    public static void loadDefaultMovieList(){
 
 
         getMovieList().clear();

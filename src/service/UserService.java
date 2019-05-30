@@ -13,7 +13,7 @@ public class UserService {
         return users;
     }
 
-    public static void defaultUserCharge(){
+    public static void loadDefaultUsers(){
         getUsers().clear();
         User user= new User("xxx-xxxx", "xxx", "admin","admin@gmail.com","555-5555");
         getUsers().add(user);

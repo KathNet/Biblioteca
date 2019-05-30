@@ -1,3 +1,5 @@
+package serviceTest;
+
 import domain.Book;
 import org.junit.jupiter.api.Test;
 import service.BookingService;
@@ -9,7 +11,7 @@ class BookingServiceTest {
     @Test
     void checkTheProcedureOfChargeBookInListOfBook(){
         //Act
-        BookingService.chargeInitialBooks();
+        BookingService.loadInitialBooks();
         //Assert
         assertEquals(5, BookingService.getCollectionBooks().size());
     }
@@ -29,7 +31,7 @@ class BookingServiceTest {
     void checkRemoveBookInTheSystem(){
         //Arrange
         Book book= new Book("Chronic Blood","2020","Katherine Pino");
-        BookingService.chargeInitialBooks();
+        BookingService.loadInitialBooks();
         //Act
         BookingService.removeBookToTheSystem("Chronic Blood");
         //Assert

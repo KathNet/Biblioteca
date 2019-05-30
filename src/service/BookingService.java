@@ -13,7 +13,7 @@ public class BookingService {
         return collectionBooks;
     }
 
-    public static void chargeInitialBooks() {
+    public static void loadInitialBooks() {
         collectionBooks.clear();
         Book book1 = new Book("El Ingenioso Hidalgo Don Quijote de la Mancha", "1605", "Miguel de Cervantes");
         Book book2 = new Book("El Poema de mio Cid", "1140", "Unknown");

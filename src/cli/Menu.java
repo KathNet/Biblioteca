@@ -2,12 +2,13 @@ package cli;
 
 import domain.Book;
 import domain.Movie;
+import service.UserService;
+import service.BookingService;
+import service.MovieService;
 
 import java.util.Scanner;
 
 public class Menu {
-
-    private
 
     public String createMenu() {
         String Menu = new String();
@@ -16,7 +17,7 @@ public class Menu {
                 "2)CheckOut Book\n" +
                 "3)Return Book \n" +
                 "4)List of Movies \n"+
-                "5)CheckOut domain.Movie: \n"+
+                "5)CheckOut Movie: \n"+
                 "0)Exit\n"+
                 "Option: ";
         return Menu;
@@ -38,79 +39,111 @@ public class Menu {
 
     public void receiveOptionChooseForUserAndCallTheActionSelect(String option) {
         Scanner scanner = new Scanner(System.in);
-        boolean verification= false;
-        String credential;
-        String password;
         switch (option){
             case "0":
-                System.out.println("Quit Application");
+                printAGoodbyeMessageAndEndTheApplicationProcess();
                 break;
             case "1":
-                System.out.println("List of Books:  \n");
-                printCollectionBooks();
+                printAListOfBooks();
                 break;
             case "2":
-                System.out.println("Checkout domain.Book \n" + "domain.User: \n");
-                credential= scanner.nextLine();
-                System.out.println("Password: \n");
-                password= scanner.nextLine();
-                if(UserService.verificationOfUserAdminAndPass(credential, password)) {
-                    System.out.println("List of Books:  \n");
-                    printCollectionBooks();
-                    System.out.println("----------------------------------------------");
-                    System.out.println("Name of domain.Book: \n");
-                    String nameBook= scanner.nextLine();
-                    verification = BookingService.removeBookToTheSystem(nameBook);
-                    printMessageAboutCheckout(verification);
-                    printCollectionBooks();
-                }
-                else{
-                    System.out.println("Credential fail");
-                }
+                printInstructionAndAllowCheckoutOfBooks(scanner);
                 break;
             case "3":
-                System.out.println("Return domain.Book \n" + "domain.User: \n");
-                credential= scanner.nextLine();
-                System.out.println("Password: \n");
-                password= scanner.nextLine();
-                if(UserService.verificationOfUserAdminAndPass(credential, password)) {
-                    System.out.println("List of Books:  \n");
-                    printCollectionBooks();
-                    System.out.println("----------------------------------------------");
-                    System.out.println("Name of domain.Book: \n");
-                    String nameOfBook = scanner.nextLine();
-                    System.out.println("Date: \n");
-                    String date = scanner.nextLine();
-                    System.out.println("Author: \n");
-                    String author = scanner.nextLine();
-                    Book book = new Book(nameOfBook, date, author);
-                    verification = BookingService.addBookToTheSystem(book);
-                    printMessageAboutAddBook(verification);
-                    printCollectionBooks();
-                }
-                else{
-                    System.out.println("Credential Fail");
-                }
+                printInstructionAndAllowReturnOfBooks(scanner);
                 break;
             case "4":
-                System.out.println("List of Movies \n");
-                printCollectionMovies();
+                printListOfMovies();
                 break;
             case "5":
-                System.out.println("CheckOutMovies \n");
-                System.out.println("List of Movies \n");
-                printCollectionMovies();
-                System.out.println("----------------------------------------------");
-                System.out.println("Name of domain.Movie:");
-                String nameOfMovie= scanner.nextLine();
-                MovieService.removeMovieToTheSystem(nameOfMovie);
-                System.out.println("----------------------------------------------");
-                printCollectionMovies();
+                PrintInstructionsAndAllowCheckoutMovies(scanner);
                 break;
             default:
                 System.out.println(this.printErrorChoiceMessage());
                 break;
         }
+    }
+
+    private void PrintInstructionsAndAllowCheckoutMovies(Scanner scanner) {
+        System.out.println("CheckOutMovies \n");
+        System.out.println("List of Movies \n");
+        printCollectionMovies();
+        System.out.println("----------------------------------------------");
+        System.out.println("Name of Movie:");
+        String nameOfMovie= scanner.nextLine();
+        MovieService.removeMovieToTheSystem(nameOfMovie);
+        System.out.println("----------------------------------------------");
+        printCollectionMovies();
+        return;
+    }
+
+    private void printListOfMovies() {
+        System.out.println("List of Movies \n");
+        printCollectionMovies();
+        return;
+    }
+
+    private void printInstructionAndAllowReturnOfBooks(Scanner scanner) {
+        String credential;
+        String password;
+        boolean verification;
+        System.out.println("Return Book \n" + "User: \n");
+        credential= scanner.nextLine();
+        System.out.println("Password: \n");
+        password= scanner.nextLine();
+        if(UserService.verificationOfUserAdminAndPass(credential, password)) {
+            System.out.println("List of Books:  \n");
+            printCollectionBooks();
+            System.out.println("----------------------------------------------");
+            System.out.println("Name of Book: \n");
+            String nameOfBook = scanner.nextLine();
+            System.out.println("Date: \n");
+            String date = scanner.nextLine();
+            System.out.println("Author: \n");
+            String author = scanner.nextLine();
+            Book book = new Book(nameOfBook, date, author);
+            verification = BookingService.addBookToTheSystem(book);
+            printMessageAboutAddBook(verification);
+            printCollectionBooks();
+        }
+        else{
+            System.out.println("Credential Fail");
+        }
+    }
+
+    private void printInstructionAndAllowCheckoutOfBooks(Scanner scanner) {
+        String credential;
+        String password;
+        boolean verification;
+        System.out.println("Checkout Book \n" + "User: \n" +"\u001B[32m");
+        credential= scanner.nextLine();
+        System.out.println("Password: \n");
+        password= scanner.nextLine();
+        if(UserService.verificationOfUserAdminAndPass(credential, password)) {
+            System.out.println("List of Books:  \n");
+            printCollectionBooks();
+            System.out.println("----------------------------------------------");
+            System.out.println("Name of Book: \n");
+            String nameBook= scanner.nextLine();
+            verification = BookingService.removeBookToTheSystem(nameBook);
+            printMessageAboutCheckout(verification);
+            System.out.println(" \n");
+            printCollectionBooks();
+        }
+        else{
+            System.out.println("Credential fail");
+        }
+    }
+
+    private void printAListOfBooks() {
+        System.out.println("List of Books:  \n");
+        printCollectionBooks();
+        return;
+    }
+
+    private void printAGoodbyeMessageAndEndTheApplicationProcess() {
+        System.out.println("Quit Application");
+        return;
     }
 
     public void printCollectionBooks(){

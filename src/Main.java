@@ -1,25 +1,19 @@
 import cli.Menu;
+import cli.Options;
 import service.BookingService;
 import service.MovieService;
 import service.UserService;
 
-import java.util.ArrayList;
-import java.util.List;
 import java.util.Scanner;
 
 public class Main {
 
     public static void main(String[] args) {
-        UserService.defaultUserCharge();
-        BookingService.chargeInitialBooks();
-        MovieService.chargeDefaultMovieList();
-        List<String> optionSelection= new ArrayList<>();
-        optionSelection.add("0");
-        optionSelection.add("1");
-        optionSelection.add("2");
-        optionSelection.add("3");
-        optionSelection.add("4");
-        optionSelection.add("5");
+        Options.loadAvailableOptions();
+        UserService.loadDefaultUsers();
+        BookingService.loadInitialBooks();
+        MovieService.loadDefaultMovieList();
+
         String option="";
         String stringLoad="";
         Scanner scanner= new Scanner(System.in);
@@ -29,7 +23,7 @@ public class Main {
             menu.printWelcomeMessage();
             System.out.println(stringLoad =menu.createMenu());
             option= scanner.next();
-        } while(!optionSelection.contains(option));
+        } while(!Options.getOptions().contains(option));
 
         menu.receiveOptionChooseForUserAndCallTheActionSelect(option);
         }
