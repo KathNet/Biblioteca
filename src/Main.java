@@ -13,18 +13,20 @@ public class Main {
         UserService.loadDefaultUsers();
         BookingService.loadInitialBooks();
         MovieService.loadDefaultMovieList();
-
         String option="";
-        String stringLoad="";
         Scanner scanner= new Scanner(System.in);
         Menu menu= new Menu();
-
+        int count=0;
         do {
-            menu.printWelcomeMessage();
-            System.out.println(stringLoad =menu.createMenu());
+            if(count>0)
+            {
+                System.out.println("Enter a valid option \n");
+            }
+            System.out.println(menu.printWelcomeMessage());
+            System.out.println(menu.createMenu());
             option= scanner.next();
+            count++;
         } while(!Options.getOptions().contains(option));
-
         menu.receiveOptionChooseForUserAndCallTheActionSelect(option);
         }
 }

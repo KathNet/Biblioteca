@@ -34,7 +34,21 @@ public class Menu {
     }
 
     public String printQuestionContinue(){
-        return "do you want to continue with program?";
+        return "do you want to continue with program?: ";
+    }
+
+    public void printReloadMenuAndOptionsMenu()
+    {
+        Scanner scanner= new Scanner(System.in);
+        String option= "";
+        System.out.println(printQuestionContinue());
+        option= scanner.nextLine();
+        if(option.equals("y") || option.equals("yes"))
+        {
+            System.out.println(createMenu());
+            option=scanner.nextLine();
+            receiveOptionChooseForUserAndCallTheActionSelect(option);
+        }
     }
 
     public void receiveOptionChooseForUserAndCallTheActionSelect(String option) {
@@ -42,21 +56,27 @@ public class Menu {
         switch (option){
             case "0":
                 printAGoodbyeMessageAndEndTheApplicationProcess();
+                printReloadMenuAndOptionsMenu();
                 break;
             case "1":
                 printAListOfBooks();
+                printReloadMenuAndOptionsMenu();
                 break;
             case "2":
                 printInstructionAndAllowCheckoutOfBooks(scanner);
+                printReloadMenuAndOptionsMenu();
                 break;
             case "3":
                 printInstructionAndAllowReturnOfBooks(scanner);
+                printReloadMenuAndOptionsMenu();
                 break;
             case "4":
                 printListOfMovies();
+                printReloadMenuAndOptionsMenu();
                 break;
             case "5":
                 PrintInstructionsAndAllowCheckoutMovies(scanner);
+                printReloadMenuAndOptionsMenu();
                 break;
             default:
                 System.out.println(this.printErrorChoiceMessage());
