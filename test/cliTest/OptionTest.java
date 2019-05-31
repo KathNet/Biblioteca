@@ -10,7 +10,7 @@ public class OptionTest {
     @Test
     void addOptionInList(){
         Options.loadAvailableOptions();
-        assertEquals(6, Options.getOptions().size());
+        assertEquals(8, Options.getOptions().size());
     }
 
     @Test

@@ -7,6 +7,15 @@ public class User {
     private String name= "";
     private String email= "";
     private String phone="";
+    private boolean state=false;
+
+    public boolean isState() {
+        return state;
+    }
+
+    public void setState(boolean state) {
+        this.state = state;
+    }
 
     public String getCredential() {
         return credential;
@@ -41,12 +50,13 @@ public class User {
         this.phone = phone;
     }
 
-    public User(String credential, String pass, String name, String mail, String phone){
+    public User(String credential, String pass, String name, String mail, String phone, boolean state){
         setNameOfUser(credential);
         setPasswordUser(pass);
         setName(name);
         setEmail(mail);
         setPhone(phone);
+        setState(state);
     }
 
 }

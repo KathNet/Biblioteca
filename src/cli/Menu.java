@@ -2,9 +2,9 @@ package cli;
 
 import domain.Book;
 import domain.Movie;
-import service.UserService;
 import service.BookingService;
 import service.MovieService;
+import service.UserService;
 
 import java.util.Scanner;
 
@@ -18,6 +18,8 @@ public class Menu {
                 "3)Return Book \n" +
                 "4)List of Movies \n"+
                 "5)CheckOut Movie: \n"+
+                "6)login \n" +
+                "7)View My Information (you need login for this) \n"+
                 "0)Exit\n"+
                 "Option: ";
         return Menu;
@@ -76,6 +78,25 @@ public class Menu {
                 break;
             case "5":
                 PrintInstructionsAndAllowCheckoutMovies(scanner);
+                printReloadMenuAndOptionsMenu();
+                break;
+            case "6":
+                String user="";
+                String pass="";
+                System.out.println("User: ");
+                user=scanner.nextLine();
+                System.out.println("Pass: ");
+                pass=scanner.nextLine();
+                if(UserService.verificationOfUserAdminAndPass(user,pass))
+                {
+                    System.out.println("welcome "+ user + "you are admin");
+                }
+                else
+                {
+                    UserService.searchUserAndChangeState(user, pass);
+                    System.out.println("fail");
+
+                }
                 printReloadMenuAndOptionsMenu();
                 break;
             default:

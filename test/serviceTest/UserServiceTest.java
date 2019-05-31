@@ -9,39 +9,36 @@ class UserServiceTest {
 
     @Test
     void checkDefaultUser(){
-        //Arrange
-        //Act
         UserService.loadDefaultUsers();
-        //Assert
-        assertEquals(1, UserService.getUsers().size());
+        assertEquals(2, UserService.getUsers().size());
     }
 
     @Test
     void checkVerificationOfUserAndPassword()
     {
-        //Arrange
         UserService.loadDefaultUsers();
-        //Act
-        //Assert
         assertEquals(true, UserService.verificationOfUserAdminAndPass("xxx-xxxx", "xxx"));
     }
 
     @Test
     void checkFailVerificationOfUserAndPassword()
     {
-        //Arrange
         UserService.loadDefaultUsers();
-        //Act
-        //Assert
         assertEquals(false, UserService.verificationOfUserAdminAndPass("xxxxxxx", "xxx"));
     }
 
     @Test
     void checkCorrectSearchInListOfUser(){
-        //Arrange
-        //Act
         UserService.loadDefaultUsers();
-        // Assert
         assertEquals(true, UserService.searchInListOfUserForOneUser("xxx-xxxx","xxx"));
+    }
+
+    @Test
+    void checkSearchUserAndChangeState()
+    {
+        UserService.loadDefaultUsers();
+        UserService.searchUserAndChangeState("Kath", "123");
+        assertEquals(true, UserService.getUsers().get(1).isState());
+
     }
 }

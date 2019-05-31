@@ -19,5 +19,7 @@ public class Options {
         getOptions().add("3");
         getOptions().add("4");
         getOptions().add("5");
+        getOptions().add("6");
+        getOptions().add("7");
     }
 }
