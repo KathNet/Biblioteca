@@ -39,6 +39,6 @@ class UserServiceTest {
         UserService.loadDefaultUsers();
         UserService.searchUserAndChangeState("Kath", "123");
         assertEquals(true, UserService.getUsers().get(1).isState());
-
+        UserService.turnFalseAllUsers();
     }
 }

@@ -2,6 +2,7 @@ package cli;
 
 import domain.Book;
 import domain.Movie;
+import domain.User;
 import service.BookingService;
 import service.MovieService;
 import service.UserService;
@@ -19,7 +20,6 @@ public class Menu {
                 "4)List of Movies \n"+
                 "5)CheckOut Movie: \n"+
                 "6)login \n" +
-                "7)View My Information (you need login for this) \n"+
                 "0)Exit\n"+
                 "Option: ";
         return Menu;
@@ -36,7 +36,7 @@ public class Menu {
     }
 
     public String printQuestionContinue(){
-        return "do you want to continue with program?: ";
+        return "do you want to continue with program?: (y or yes is accepted) ";
     }
 
     public void printReloadMenuAndOptionsMenu()
@@ -81,28 +81,37 @@ public class Menu {
                 printReloadMenuAndOptionsMenu();
                 break;
             case "6":
-                String user="";
-                String pass="";
-                System.out.println("User: ");
-                user=scanner.nextLine();
-                System.out.println("Pass: ");
-                pass=scanner.nextLine();
-                if(UserService.verificationOfUserAdminAndPass(user,pass))
-                {
-                    System.out.println("welcome "+ user + "you are admin");
-                }
-                else
-                {
-                    UserService.searchUserAndChangeState(user, pass);
-                    System.out.println("fail");
-
-                }
-                printReloadMenuAndOptionsMenu();
+                loginAndShowInfo(scanner);
                 break;
             default:
                 System.out.println(this.printErrorChoiceMessage());
                 break;
         }
+    }
+
+    private void loginAndShowInfo(Scanner scanner) {
+        String user="";
+        String pass="";
+        System.out.println("User: ");
+        user=scanner.nextLine();
+        System.out.println("Pass: ");
+        pass=scanner.nextLine();
+        if(UserService.searchUserAndChangeState(user, pass))
+        {
+            System.out.println("welcome "+ user+ "\n");
+            User userReturn= UserService.returnUser();
+            System.out.println("Credential: " + userReturn.getCredential());
+            System.out.println("Name: " + userReturn.getName());
+            System.out.println("Phone: " + userReturn.getPhone());
+            System.out.println("Email: " +userReturn.getEmail());
+        }
+        else
+        {
+            UserService.searchUserAndChangeState(user, pass);
+            System.out.println("fail");
+
+        }
+        printReloadMenuAndOptionsMenu();
     }
 
     private void PrintInstructionsAndAllowCheckoutMovies(Scanner scanner) {

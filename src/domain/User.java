@@ -9,6 +9,18 @@ public class User {
     private String phone="";
     private boolean state=false;
 
+    public String getName() {
+        return name;
+    }
+
+    public String getEmail() {
+        return email;
+    }
+
+    public String getPhone() {
+        return phone;
+    }
+
     public boolean isState() {
         return state;
     }

@@ -52,7 +52,6 @@ class MenuTest {
                 "4)List of Movies \n"+
                 "5)CheckOut Movie: \n"+
                 "6)login \n" +
-                "7)View My Information (you need login for this) \n"+
                 "0)Exit\n"+
                 "Option: ";
         MenuReal= menu.createMenu();

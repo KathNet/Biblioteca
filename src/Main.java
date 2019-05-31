@@ -11,6 +11,7 @@ public class Main {
     public static void main(String[] args) {
         Options.loadAvailableOptions();
         UserService.loadDefaultUsers();
+        UserService.turnFalseAllUsers();
         BookingService.loadInitialBooks();
         MovieService.loadDefaultMovieList();
         String option="";

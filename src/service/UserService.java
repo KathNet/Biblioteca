@@ -7,6 +7,21 @@ import java.util.List;
 
 public class UserService {
 
+
+    private static int indexUserActive;
+
+    public static int getIndexUserActive() {
+        return indexUserActive;
+    }
+
+    public static void setIndexUserActive(int indexUserActive) {
+        UserService.indexUserActive = indexUserActive;
+    }
+
+    public static void setUsers(List<User> users) {
+        UserService.users = users;
+    }
+
     private static List<User> users= new ArrayList<User>();
 
     public static List<User> getUsers() {
@@ -19,6 +34,12 @@ public class UserService {
         getUsers().add(user);
         User user2= new User("kath", "123", "Katherine", "kath@gmail.com", "123-4567", false);
         getUsers().add(user2);
+    }
+
+    public static User returnUser ()
+    {
+        User user= getUsers().get(getIndexUserActive());
+        return user;
     }
 
     public static boolean verificationOfUserAdminAndPass(String credential, String pass)
@@ -39,6 +60,7 @@ public class UserService {
             {
                 getUsers().get(count).setState(true);
                 existUser= true;
+                setIndexUserActive(count);
             }
             count++;
         }
@@ -56,6 +78,11 @@ public class UserService {
         return false;
     }
 
-
+    public static void turnFalseAllUsers()
+    {
+        for (User users: getUsers()) {
+            users.setState(false);
+        }
+    }
 }
 
